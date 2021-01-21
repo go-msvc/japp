@@ -1,0 +1,48 @@
+{
+    "start":"main",
+    "steps":{
+        "main":{
+            "choice":{
+                "header":"*** MAIN MENU ***",
+                "options":[
+                    {"text":"Register","next":"register_name"},
+                    {"text":"One","next":"one"},
+                    {"text":"Two","next":"two"}
+                ]
+            }
+        },
+        "register_name":{
+            "prompt":{
+                "text":"Enter your name",
+                "set":"name",
+                "next":"register"
+            }
+        },
+        "register":{
+            "choice":{
+                "header":"Registered {{.name}}.",
+                "options":[
+                    {"text":"Back", "next":"main"}
+                ]
+            }
+        },
+        "one":{
+            "choice":{
+                "header":"*** MENU ONE ***",
+                "options":[
+                    {"text":"One","next":"one"},
+                    {"text":"Two","next":"two"}
+                ]
+            }
+        },
+        "two":{
+            "choice":{
+                "header":"*** MENU TWO ***",
+                "options":[
+                    {"text":"One","next":"one"},
+                    {"text":"Two","next":"two"}
+                ]
+            }
+        }
+    }
+}

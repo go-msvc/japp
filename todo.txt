@@ -1,0 +1,52 @@
+Done
+* Created japp,jcli,jsessions,jconsole
+* Demo basic menu and prompt
+* Session is in memory
+* Cli is through http post
+* Started with jweb displaying main menu
+* copied config to config/... and wrote test program for user actions (app not yet using this)
+* added templates to Text
+* updated japp API to respond with content
+* updated jconsole to render content to text
+* added cookies to jweb
+* jweb worked with prompts and menus
+
+Current:
+* update jconsole to pass step in contReq
+
+* make users store work in japp and check session mgt from jweb and jconsole
+* (not auth - just session management with client id)
+* let jsonsole store client id and re-use
+* e.g. MSISDN/username for auth is entered by user, verified and must be stored for the client id on the server - not on client
+
+Next
+* change jconsole and jweb to use not japp API + render proper content as text/html
+* sessions must expire
+* use cookies for user id, or command line in jconsole - can set various fields in cookie/config - app should start with random user if not specified.
+* console and web must display content correctly
+* fake service call in config_test and use output
+* Show menu + select links in web - need to get details from app...
+* then show prompts as forms
+* jconsole must start without input to request main menu
+* jweb does not make selection or get input
+* japp to respond with temp item to show error
+* also need to support service calls and external content from the app
+* but keep as simple as possible
+* dynamic choice lists will be needed
+* input validation rules in client (repeat in japp to be sure, but allow client to validate too)
+* add another user to reflect e.g. richer html
+* japp to make service calls
+* use session data in the app calls and text substitution
+* add messages final/intermediate (with [ok] to proceed)
+* add a form to submit, console must enter form and complete all prompts and allow to go back
+* add useful services, e.g. db, redis, email, sms, lists, groups, bookings, ...
+* make content items extensible, e.g. to add date inputs and other things with non-simple text values
+* router to select apps from a menu
+* jsessions from a service call, shared by multiple services, with expiry, user counts, list of users + when etc.
+* mobile app
+
+First Apps:
+* event + entry (without login)
+* group + join + communicate (without login)
+* auth service to be used in other services
+* black-white service
